@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery | InfiniteShutter</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- Navigation -->
+<header>
+    <nav class="navbar">
+        <h1 class="logo">InfiniteShutter</h1>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="pricing.html">Pricing</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+
+<!-- Page intro -->
+<section class="intro">
+    <h2>Gallery</h2>
+    <p>Automotive photography is my main focus, complemented by portraits and events.</p>
+</section>
+
+<!-- Gallery -->
+<section class="gallery">
+
+    <!-- Automotive -->
+    <div class="gallery-category">
+        <h3>Automotive</h3>
+        <img src="images/car1.jpg" alt="Automotive photography">
+        <img src="images/car2.jpg" alt="Automotive photography">
+        <img src="images/car3.jpg" alt="Automotive photography">
+        <img src="images/car4.jpg" alt="Automotive photography">
+        <img src="images/car5.jpg" alt="Automotive photography">
+        <img src="images/car6.jpg" alt="Automotive photography">
+        <img src="images/car7.jpg" alt="Automotive photography">
+        <img src="images/car8.jpg" alt="Automotive photography">
+        <img src="images/car9.jpg" alt="Automotive photography">
+    </div>
+
+    <!-- Portrait -->
+    <div class="gallery-category">
+        <h3>Portrait</h3>
+        <img src="images/portrait1.jpg" alt="Portrait photography">
+        <img src="images/portrait2.jpg" alt="Portrait photography">
+        <img src="images/portrait3.jpg" alt="Portrait photography">
+        <img src="images/portrait4.jpg" alt="Portrait photography">
+        <img src="images/portrait5.jpg" alt="Portrait photography">
+        <img src="images/portrait6.jpg" alt="Portrait photography">
+        <img src="images/portrait7.jpg" alt="Portrait photography">
+        <img src="images/portrait8.jpg" alt="Portrait photography">
+    </div>
+
+    <!-- Event & Street -->
+    <div class="gallery-category">
+    <h3>Event</h3>
+    <img src="images/event1.jpg">
+    <img src="images/event2.jpg">
+    <img src="images/event3.jpg">
+    <img src="images/event4.jpg">
+    <img src="images/event5.jpg">
+    <img src="images/event6.jpg">
+</div>
+
+<div class="gallery-category">
+    <h3>Street</h3>
+    <img src="images/street1.jpg">
+    <img src="images/street2.jpg">
+    <img src="images/street3.jpg">
+    <img src="images/street4.jpg">
+    <img src="images/street5.jpg">
+    <img src="images/street6.jpg">
+    <img src="images/street7.jpg">
+</div>
+
+</section>
+
+<!-- Footer -->
+<footer>
+    <p>© 2026 InfiniteShutter. All rights reserved.</p>
+</footer>
+
+<div id="lightbox">
+    <span class="lightbox-arrow left">&#10094;</span>
+    <img id="lightbox-img">
+    <span class="lightbox-arrow right">&#10095;</span>
+</div>
+
+
+<script>
+    const images = Array.from(document.querySelectorAll('.gallery img'));
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightbox-img');
+    const prevBtn = document.querySelector('.lightbox-arrow.left');
+    const nextBtn = document.querySelector('.lightbox-arrow.right');
+
+    let currentIndex = 0;
+
+    images.forEach((img, index) => {
+        img.addEventListener('click', () => {
+            currentIndex = index;
+            openLightbox();
+        });
+    });
+
+    function openLightbox() {
+        lightbox.style.display = 'flex';
+        lightboxImg.src = images[currentIndex].src;
+    }
+
+    function showNext() {
+        currentIndex = (currentIndex + 1) % images.length;
+        lightboxImg.src = images[currentIndex].src;
+    }
+
+    function showPrev() {
+        currentIndex = (currentIndex - 1 + images.length) % images.length;
+        lightboxImg.src = images[currentIndex].src;
+    }
+
+    nextBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        showNext();
+    });
+
+    prevBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        showPrev();
+    });
+
+    lightbox.addEventListener('click', () => {
+        lightbox.style.display = 'none';
+    });
+
+    document.addEventListener('keydown', (e) => {
+        if (lightbox.style.display === 'flex') {
+            if (e.key === 'ArrowRight') showNext();
+            if (e.key === 'ArrowLeft') showPrev();
+            if (e.key === 'Escape') lightbox.style.display = 'none';
+        }
+    });
+</script>
+
+
+</body>
+</html>
