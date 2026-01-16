@@ -1,0 +1,269 @@
+body {
+    color: #111;
+    background: #fff;
+
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+/* Navigation */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #111;
+    text-transform: uppercase;
+    font-size: 14px;
+}
+
+/* Hero */
+.hero {
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.hero-image {
+    background-image: url("../images/hero.jpg");
+    background-size: cover;
+    background-position: center;
+    color: white;
+    position: relative;
+}
+
+.hero-image::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.45);
+}
+
+.hero-text {
+    position: relative;
+    z-index: 1;
+}
+
+.hero-text p {
+    margin-bottom: 25px;
+}
+
+
+
+.btn {
+    border: 1px solid white;
+    padding: 12px 24px;
+    color: white;
+    text-decoration: none;
+}
+
+/* Intro */
+.intro {
+    padding: 60px 40px;
+    text-align: center;
+}
+
+
+/* Pricing */
+.pricing-table {
+    padding: 40px;
+}
+
+table {
+    width: 100%;
+    max-width: 900px;
+    margin: auto;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 15px;
+    border-bottom: 1px solid #ddd;
+    text-align: left;
+}
+
+th {
+    font-weight: 600;
+}
+
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .gallery-columns {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .gallery-columns {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Simple gallery with category separation */
+.gallery {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 40px;
+}
+
+.gallery-category {
+    margin-bottom: 80px;
+}
+
+.gallery-category h3 {
+    text-align: center;
+    font-size: 22px;
+    letter-spacing: 2px;
+    margin-bottom: 40px;
+    position: relative;
+}
+
+.gallery-category h3::after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 2px;
+    background-color: #111;
+    margin: 15px auto 0;
+}
+
+.gallery-category img {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin-bottom: 20px;
+    transition: 0.3s ease;
+}
+
+.gallery-category {
+    margin-bottom: 100px;
+
+    column-count: 3;
+    column-gap: 20px;
+}
+
+.gallery-category h3 {
+    column-span: all;
+    text-align: center;
+    font-size: 22px;
+    letter-spacing: 2px;
+    margin-bottom: 40px;
+    position: relative;
+}
+
+.gallery-category h3::after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 2px;
+    background-color: #111;
+    margin: 15px auto 0;
+}
+
+.gallery-category img {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin-bottom: 20px;
+
+    break-inside: avoid;
+    transition: 0.3s ease;
+}
+
+.gallery-category img:hover {
+    transform: scale(1.02);
+}
+
+
+.gallery-category h3 {
+    grid-column: 1 / -1;
+}
+
+
+.gallery-category img:hover {
+    transform: scale(1.02);
+}
+
+@media (max-width: 1024px) {
+    .gallery-category {
+        column-count: 2;
+    }
+}
+
+@media (max-width: 600px) {
+    .gallery-category {
+        column-count: 1;
+    }
+}
+
+footer {
+    margin-top: auto;
+    padding: 20px 40px;
+    font-size: 14px;
+}
+
+/* Lightbox */
+#lightbox {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.85);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+}
+
+#lightbox img {
+    max-width: 90%;
+    max-height: 90%;
+    box-shadow: 0 0 20px rgba(0,0,0,0.5);
+}
+
+/* About photo */
+.about-photo {
+    width: 200px;
+    border-radius: 25%;
+    margin: 30px auto;
+    display: block;
+}
+
+/* Lightbox arrows */
+.lightbox-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 50px;
+    color: white;
+    cursor: pointer;
+    user-select: none;
+    padding: 10px;
+}
+
+.lightbox-arrow.left {
+    left: 30px;
+}
+
+.lightbox-arrow.right {
+    right: 30px;
+}
+
+.lightbox-arrow:hover {
+    opacity: 0.7;
+}
