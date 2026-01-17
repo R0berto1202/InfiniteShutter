@@ -267,32 +267,3 @@ footer {
 .lightbox-arrow:hover {
     opacity: 0.7;
 }
-
-/* Mobile navigation fix */
-@media (max-width: 768px) {
-
-    .navbar {
-        flex-direction: column;
-        align-items: center;
-        padding: 20px;
-    }
-
-    .logo {
-        margin-bottom: 15px;
-        font-size: 26px;
-    }
-
-    .nav-links {
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 12px 20px;
-    }
-
-    .nav-links li {
-        list-style: none;
-    }
-
-    .nav-links a {
-        font-size: 14px;
-    }
-}
