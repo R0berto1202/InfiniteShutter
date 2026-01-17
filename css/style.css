@@ -31,7 +31,7 @@ body {
     font-size: 14px;
 }
 
-/* Hero */
+/* HERO SECTION */
 .hero {
     height: 80vh;
     display: flex;
@@ -48,30 +48,54 @@ body {
     position: relative;
 }
 
+/* Sötét overlay */
 .hero-image::before {
     content: "";
     position: absolute;
     inset: 0;
-    background: rgba(0,0,0,0.45);
+    background: rgba(0, 0, 0, 0.45);
 }
 
+/* Hero szöveg */
 .hero-text {
     position: relative;
-    z-index: 1;
+    z-index: 25;
+    margin-top: 60px; /* lejjebb hozva */
 }
 
+/* FŐ CÍM */
+.hero-text h2 {
+    font-size: 82px;        /* nagyobb cím */
+    font-weight: 700;       /* vastagabb */
+    letter-spacing: 0.5px;  /* közelebb betűk */
+    line-height: 1.05;      /* szorosabb sor */
+    margin-bottom: 10px;    /* közelebb a szöveghez */
+}
+
+/* ALATTA LÉVŐ SZÖVEG */
 .hero-text p {
-    margin-bottom: 25px;
+    margin-top: 0;
+    margin-bottom: 18px;
+    font-size: 18px;
+    letter-spacing: 0.3px;
 }
 
+/* MOBIL FINOMHANGOLÁS */
+@media (max-width: 600px) {
+    .hero-text {
+        margin-top: 30px;
+    }
 
+    .hero-text h2 {
+        font-size: 48px;
+        line-height: 1.1;
+    }
 
-.btn {
-    border: 1px solid white;
-    padding: 12px 24px;
-    color: white;
-    text-decoration: none;
+    .hero-text p {
+        font-size: 16px;
+    }
 }
+
 
 /* Intro */
 .intro {
@@ -298,4 +322,31 @@ footer {
     .nav-links.active {
         display: flex;
     }
+}
+
+@media (max-width: 600px) {
+    .hero-text h2 {
+        font-size: 32px;
+        line-height: 1.25;
+    }
+}
+
+/* VIEW GALLERY BUTTON */
+.hero-text .btn {
+    display: inline-block;
+    padding: 12px 34px;
+    border: 2px solid #ffffff;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 14px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    background: transparent;
+    transition: all 0.3s ease;
+}
+
+/* Hover – finom, elegáns */
+.hero-text .btn:hover {
+    background: #ffffff;
+    color: #000000;
 }
