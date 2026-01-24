@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+
     <meta name="description" content="InfiniteShutter – Automotive, portrait and event photography portfolio.">
     <meta name="keywords" content="InfiniteShutter, photography, automotive photography, portrait photography">
 
@@ -59,6 +61,13 @@ function toggleMenu() {
     document.querySelector('.nav-links').classList.toggle('active');
 }
 </script>
+
+<div class="lightbox" id="lightbox">
+    <span class="close">&times;</span>
+    <img id="lightboxImg">
+    <span class="prev">&#10094;</span>
+    <span class="next">&#10095;</span>
+</div>
 
 </body>
 </html>

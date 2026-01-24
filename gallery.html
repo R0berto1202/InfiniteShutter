@@ -1,192 +1,150 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta name="description" content="InfiniteShutter – Automotive, portrait and event photography portfolio.">
-    <meta name="keywords" content="InfiniteShutter, photography, automotive photography, portrait photography">
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gallery | InfiniteShutter</title>
-    <link rel="icon" type="image/x-icon" href="favicon.ico">
-    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
 
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
 
-<!-- Navigation -->
-<header>
-    <nav class="navbar">
+<!-- NAV -->
+<nav class="navbar">
     <h1 class="logo">InfiniteShutter</h1>
 
-    <!-- Hamburger icon -->
-    <div class="hamburger" onclick="toggleMenu()">
-        ☰
-    </div>
+    <div class="hamburger" onclick="toggleMenu()">☰</div>
 
     <ul class="nav-links">
         <li><a href="index.html">Home</a></li>
-        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="gallery.html" class="active">Gallery</a></li>
         <li><a href="pricing.html">Pricing</a></li>
         <li><a href="about.html">About</a></li>
         <li><a href="contact.html">Contact</a></li>
     </ul>
 </nav>
 
-</header>
+<main>
 
-<!-- Page intro -->
-<section class="intro">
-    <h2>Gallery</h2>
-    <p>Automotive photography is my main focus, complemented by portraits and events.</p>
+<!-- ACTIVE CATEGORY -->
+<section class="active-category" id="activeCategory">
+    <div class="active-cover">
+        <img id="activeCoverImg" alt="">
+        <h2 id="activeTitle"></h2>
+    </div>
+
+    <div class="active-images" id="activeImages"></div>
 </section>
 
-<!-- Gallery -->
-<section class="gallery">
+<!-- CATEGORY GRID -->
+<section class="gallery-categories" id="categoriesGrid">
 
-  <!-- Automotive -->
-  <div class="gallery-category">
-    <h3>Automotive</h3>
-    <div class="gallery-grid">
-      <img src="images/car1.jpg" alt="Automotive photography" loading="lazy" decoding="async">
-      <img src="images/car2.jpg" alt="Automotive photography" loading="lazy" decoding="async">
-      <img src="images/car3.jpg" alt="Automotive photography" loading="lazy" decoding="async">
-      <img src="images/car4.jpg" alt="Automotive photography" loading="lazy" decoding="async">
-      <img src="images/car5.jpg" alt="Automotive photography" loading="lazy" decoding="async">
-      <img src="images/car6.jpg" alt="Automotive photography" loading="lazy" decoding="async">
-      <img src="images/car7.jpg" alt="Automotive photography" loading="lazy" decoding="async">
-      <img src="images/car8.jpg" alt="Automotive photography" loading="lazy" decoding="async">
-      <img src="images/car9.jpg" alt="Automotive photography" loading="lazy" decoding="async">
-      <img src="images/car10.jpg" alt="Automotive photography" loading="lazy" decoding="async">
-      <img src="images/car11.jpg" alt="Automotive photography" loading="lazy" decoding="async">
-      <img src="images/car12.jpg" alt="Automotive photography" loading="lazy" decoding="async">
+    <div class="category" data-title="Automotive" data-cover="images/automotive-cover.jpg"
+         data-images="images/car1.jpg,images/car2.jpg,images/car3.jpg,images/car4.jpg,images/car5.jpg,images/car6.jpg,images/car7.jpg,images/car8.jpg,images/car9.jpg">
+        <button class="category-header">
+            <img src="images/automotive-cover.jpg" alt="">
+            <span>Automotive</span>
+        </button>
     </div>
-  </div>
 
-  <!-- Portrait -->
-  <div class="gallery-category">
-    <h3>Portrait</h3>
-    <div class="gallery-grid">
-      <img src="images/portrait1.jpg" alt="Portrait photography" loading="lazy" decoding="async">
-      <img src="images/portrait2.jpg" alt="Portrait photography" loading="lazy" decoding="async">
-      <img src="images/portrait3.jpg" alt="Portrait photography" loading="lazy" decoding="async">
-      <img src="images/portrait4.jpg" alt="Portrait photography" loading="lazy" decoding="async">
-      <img src="images/portrait5.jpg" alt="Portrait photography" loading="lazy" decoding="async">
-      <img src="images/portrait6.jpg" alt="Portrait photography" loading="lazy" decoding="async">
-      <img src="images/portrait7.jpg" alt="Portrait photography" loading="lazy" decoding="async">
-      <img src="images/portrait8.jpg" alt="Portrait photography" loading="lazy" decoding="async">
-      <img src="images/portrait9.jpg" alt="Portrait photography" loading="lazy" decoding="async">
-      <img src="images/portrait10.jpg" alt="Portrait photography" loading="lazy" decoding="async">
-      <img src="images/portrait11.jpg" alt="Portrait photography" loading="lazy" decoding="async">
-      <img src="images/portrait12.jpg" alt="Portrait photography" loading="lazy" decoding="async">
+    <div class="category" data-title="Portrait" data-cover="images/portrait-cover.jpg"
+         data-images="images/portrait1.jpg,images/portrait2.jpg,images/portrait3.jpg,images/portrait4.jpg,images/portrait5.jpg,images/portrait6.jpg,images/portrait7.jpg,images/portrait8.jpg">
+        <button class="category-header">
+            <img src="images/portrait-cover.jpg" alt="">
+            <span>Portrait</span>
+        </button>
     </div>
-  </div>
 
-  <!-- Event -->
-  <div class="gallery-category">
-    <h3>Event</h3>
-    <div class="gallery-grid">
-      <img src="images/event1.jpg" alt="Event photography" loading="lazy" decoding="async">
-      <img src="images/event2.jpg" alt="Event photography" loading="lazy" decoding="async">
-      <img src="images/event3.jpg" alt="Event photography" loading="lazy" decoding="async">
-      <img src="images/event4.jpg" alt="Event photography" loading="lazy" decoding="async">
-      <img src="images/event5.jpg" alt="Event photography" loading="lazy" decoding="async">
-      <img src="images/event6.jpg" alt="Event photography" loading="lazy" decoding="async">
-      <img src="images/event7.jpg" alt="Event photography" loading="lazy" decoding="async">
-      <img src="images/event8.jpg" alt="Event photography" loading="lazy" decoding="async">
+    <div class="category" data-title="Event" data-cover="images/event-cover.jpg"
+         data-images="images/event1.jpg,images/event2.jpg,images/event3.jpg,images/event4.jpg,images/event5.jpg,images/event6.jpg">
+        <button class="category-header">
+            <img src="images/event-cover.jpg" alt="">
+            <span>Event</span>
+        </button>
     </div>
-  </div>
 
-  <!-- Street -->
-  <div class="gallery-category">
-    <h3>Street</h3>
-    <div class="gallery-grid">
-      <img src="images/street1.jpg" alt="Street photography" loading="lazy" decoding="async">
-      <img src="images/street2.jpg" alt="Street photography" loading="lazy" decoding="async">
-      <img src="images/street3.jpg" alt="Street photography" loading="lazy" decoding="async">
-      <img src="images/street4.jpg" alt="Street photography" loading="lazy" decoding="async">
-      <img src="images/street5.jpg" alt="Street photography" loading="lazy" decoding="async">
-      <img src="images/street6.jpg" alt="Street photography" loading="lazy" decoding="async">
-      <img src="images/street7.jpg" alt="Street photography" loading="lazy" decoding="async">
-      <img src="images/street8.jpg" alt="Street photography" loading="lazy" decoding="async">
-      <img src="images/street9.jpg" alt="Street photography" loading="lazy" decoding="async">
+    <div class="category" data-title="Street" data-cover="images/street-cover.jpg"
+         data-images="images/street1.jpg,images/street2.jpg,images/street3.jpg,images/street4.jpg,images/street5.jpg,images/street6.jpg,images/street7.jpg">
+        <button class="category-header">
+            <img src="images/street-cover.jpg" alt="">
+            <span>Street</span>
+        </button>
     </div>
-  </div>
 
 </section>
 
+</main>
 
-<!-- Footer -->
-<footer>
-    <p>© 2026 InfiniteShutter. All rights reserved.</p>
-</footer>
-
-<div id="lightbox">
-    <span class="lightbox-arrow left">&#10094;</span>
-    <img id="lightbox-img">
-    <span class="lightbox-arrow right">&#10095;</span>
+<!-- LIGHTBOX -->
+<div class="lightbox" id="lightbox">
+    <span class="close">&times;</span>
+    <span class="prev">&#10094;</span>
+    <img id="lightbox-img" alt="">
+    <span class="next">&#10095;</span>
 </div>
 
-
 <script>
-    const images = Array.from(document.querySelectorAll('.gallery img'));
-    const lightbox = document.getElementById('lightbox');
-    const lightboxImg = document.getElementById('lightbox-img');
-    const prevBtn = document.querySelector('.lightbox-arrow.left');
-    const nextBtn = document.querySelector('.lightbox-arrow.right');
+const categories = document.querySelectorAll('.category');
+const activeSection = document.getElementById('activeCategory');
+const activeTitle = document.getElementById('activeTitle');
+const activeCoverImg = document.getElementById('activeCoverImg');
+const activeImages = document.getElementById('activeImages');
+const grid = document.getElementById('categoriesGrid');
 
-    let currentIndex = 0;
+const lightbox = document.getElementById('lightbox');
+const lightboxImg = document.getElementById('lightbox-img');
 
-    images.forEach((img, index) => {
-        img.addEventListener('click', () => {
-            currentIndex = index;
-            openLightbox();
+let images = [];
+let currentIndex = 0;
+
+categories.forEach(cat => {
+    cat.querySelector('.category-header').onclick = () => {
+
+        activeTitle.textContent = cat.dataset.title;
+        activeCoverImg.src = cat.dataset.cover;
+        activeImages.innerHTML = '';
+
+        images = cat.dataset.images.split(',');
+
+        images.forEach(src => {
+            const img = document.createElement('img');
+            img.src = src;
+            img.onclick = () => openLightbox(src);
+            activeImages.appendChild(img);
         });
-    });
 
-    function openLightbox() {
-        lightbox.style.display = 'flex';
-        lightboxImg.src = images[currentIndex].src;
-    }
+        // Grid alul marad, aktív kártya eltűnik
+        categories.forEach(c => c.style.display = 'block');
+        cat.style.display = 'none';
 
-    function showNext() {
-        currentIndex = (currentIndex + 1) % images.length;
-        lightboxImg.src = images[currentIndex].src;
-    }
+        activeSection.style.display = 'block';
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    };
+});
 
-    function showPrev() {
-        currentIndex = (currentIndex - 1 + images.length) % images.length;
-        lightboxImg.src = images[currentIndex].src;
-    }
-
-    nextBtn.addEventListener('click', (e) => {
-        e.stopPropagation();
-        showNext();
-    });
-
-    prevBtn.addEventListener('click', (e) => {
-        e.stopPropagation();
-        showPrev();
-    });
-
-    lightbox.addEventListener('click', () => {
-        lightbox.style.display = 'none';
-    });
-
-    document.addEventListener('keydown', (e) => {
-        if (lightbox.style.display === 'flex') {
-            if (e.key === 'ArrowRight') showNext();
-            if (e.key === 'ArrowLeft') showPrev();
-            if (e.key === 'Escape') lightbox.style.display = 'none';
-        }
-    });
-</script>
-
-<script>
-function toggleMenu() {
-    document.querySelector('.nav-links').classList.toggle('active');
+function openLightbox(src) {
+    currentIndex = images.indexOf(src);
+    lightboxImg.src = src;
+    lightbox.classList.add('active');
 }
+
+function navigate(dir) {
+    currentIndex = (currentIndex + dir + images.length) % images.length;
+    lightboxImg.src = images[currentIndex];
+}
+
+document.querySelector('.close').onclick = () => lightbox.classList.remove('active');
+document.querySelector('.prev').onclick = () => navigate(-1);
+document.querySelector('.next').onclick = () => navigate(1);
+
+document.addEventListener('keydown', e => {
+    if (!lightbox.classList.contains('active')) return;
+    if (e.key === 'Escape') lightbox.classList.remove('active');
+    if (e.key === 'ArrowLeft') navigate(-1);
+    if (e.key === 'ArrowRight') navigate(1);
+});
 </script>
 
 </body>
