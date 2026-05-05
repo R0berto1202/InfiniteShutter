@@ -579,3 +579,65 @@ footer {
     background: #111;
     color: #fff;
 }
+
+/* CONTACT PAGE */
+.contact-section {
+    text-align: center;
+    padding: 80px 20px;
+}
+
+.contact-section h2 {
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.contact-section p {
+    margin-bottom: 30px;
+    color: #666;
+}
+
+/* LINKS */
+.contact-links {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+}
+
+.contact-links a {
+    text-decoration: none;
+    color: #111;
+    font-size: 15px;
+    letter-spacing: 1px;
+    transition: 0.3s ease;
+}
+
+.contact-links a:hover {
+    opacity: 0.6;
+}
+
+/* BUTTON */
+.contact-btn {
+    display: inline-block;
+    padding: 12px 28px;
+    border: 2px solid #111;
+    color: #111;
+    text-decoration: none;
+    font-size: 14px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    transition: 0.3s ease;
+}
+
+.contact-btn:hover {
+    background: #111;
+    color: #fff;
+}
+
+/* SMALL TEXT */
+.contact-note {
+    margin-top: 15px;
+    font-size: 13px;
+    color: #666;
+}
