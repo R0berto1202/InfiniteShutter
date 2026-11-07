@@ -14,8 +14,8 @@ document.querySelectorAll('.nav-links a').forEach(link => {
 
 document.addEventListener("DOMContentLoaded", () => {
     const elements = document.querySelectorAll(
-        "main section > *, main section .service-card, main section .work-card"
-    );
+    "main section > *, section > *"
+);
 
     elements.forEach(element => {
         element.classList.add("reveal");
