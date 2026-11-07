@@ -729,12 +729,18 @@ body {
 .hero-overlay {
     position: absolute;
     inset: 0;
-    background: linear-gradient(
-        90deg,
-        rgba(8,11,10,0.95),
-        rgba(8,11,10,0.65),
-        rgba(8,11,10,0.25)
-    );
+    background: 
+        linear-gradient(
+            to bottom,
+            transparent 55%,
+            #080B0A 100%
+        ),
+        linear-gradient(
+            90deg,
+            rgba(8, 11, 10, 0.95),
+            rgba(8, 11, 10, 0.65),
+            rgba(8, 11, 10, 0.25)
+        );
 }
 
 .hero-content {
@@ -2190,11 +2196,12 @@ body {
     transform: translateY(0);
 }
 
-/* Smooth background transitions */
+/* SMOOTH BACKGROUND TRANSITIONS */
 
 main section {
     position: relative;
     isolation: isolate;
+    background: transparent;
 }
 
 @media (prefers-reduced-motion: reduce) {
