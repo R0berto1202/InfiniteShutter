@@ -1,75 +1,175 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
-
-    <meta name="description" content="InfiniteShutter – Automotive, portrait and event photography portfolio.">
-    <meta name="keywords" content="InfiniteShutter, photography, automotive photography, portrait photography">
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>InfiniteShutter | Photography</title>
-    <link rel="icon" type="image/x-icon" href="favicon.ico">
-    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
 
+    <meta name="description" content="InfiniteShutter Creative Studio — Branding, digital marketing, web design and creative production.">
+    <meta name="keywords" content="InfiniteShutter, creative studio, branding, web design, digital marketing, photography">
+
+    <title>InfiniteShutter | Creative Studio</title>
+
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
     <link rel="stylesheet" href="css/style.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
+
 <body>
 
-<header>
-   <nav class="navbar">
-    <h1 class="logo">InfiniteShutter</h1>
+<header class="site-header">
+    <nav class="navbar">
+        <a href="index.html" class="logo">
+            InfiniteShutter
+            <span>CREATIVE STUDIO</span>
+        </a>
 
-    <!-- Hamburger icon -->
-    <div class="hamburger" onclick="toggleMenu()">
-        ☰
-    </div>
+        <div class="hamburger" onclick="toggleMenu()">
+            ☰
+        </div>
 
-    <ul class="nav-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="gallery.html">Gallery</a></li>
-        <li><a href="pricing.html">Pricing</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="contact.html">Contact</a></li>
-    </ul>
-</nav>
-
+        <ul class="nav-links">
+    <li><a href="index.html" class="active">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="services.html">Services</a></li>
+    <li><a href="gallery.html">Selected Work</a></li>
+    <li><a href="pricing.html">Pricing</a></li>
+    <li><a href="contact.html">Contact</a></li>
+</ul>
+    </nav>
 </header>
 
-<section class="hero hero-image">
-    <div class="hero-text">
-        <h2>InfiniteShutter</h2>
-        <p>Minimalist. Timeless. Professional.</p>
-        <a href="gallery.html" class="btn">View Gallery</a>
-    </div>
-</section>
+<main>
 
-<section class="intro">
-    <h3>Welcome to InfiniteShutter</h3>
-    <p>
-        I specialize in automotive photography, while also offering portrait,
-        event and street photography services.
-    </p>
-</section>
+    <!-- HERO SECTION -->
+    <section class="home-hero">
+        <div class="hero-overlay"></div>
 
-<footer>
-    <p>© 2026 InfiniteShutter. All rights reserved.</p>
+        <div class="hero-content">
+            <p class="hero-eyebrow">INDEPENDENT CREATIVE STUDIO</p>
+
+            <h1>
+                Creativity with<br>
+                <span>infinite possibilities.</span>
+            </h1>
+
+            <p class="hero-description">
+                We build visual identities, digital experiences and creative content
+                that help brands stand out.
+            </p>
+
+            <div class="hero-buttons">
+                <a href="gallery.html" class="btn-primary">Explore Our Work</a>
+                <a href="contact.html" class="btn-secondary">Start a Project</a>
+            </div>
+        </div>
+
+        <div class="hero-bottom">
+            <span>BRANDING · DIGITAL · CREATIVE</span>
+            <span>SCROLL TO EXPLORE ↓</span>
+        </div>
+    </section>
+
+    <!-- INTRODUCTION -->
+    <section class="home-intro">
+        <p class="section-label">01 / WHO WE ARE</p>
+
+        <h2>
+            More than just visuals.<br>
+            <span>We create experiences.</span>
+        </h2>
+
+        <p class="intro-description">
+            InfiniteShutter is an independent creative studio focused on
+            building meaningful visual identities and digital experiences.
+            From the first idea to the final result, we bring creativity
+            and strategy together.
+        </p>
+    </section>
+
+    <!-- SERVICES -->
+    <section class="home-services">
+        <div class="section-heading">
+            <div>
+                <p class="section-label">02 / WHAT WE DO</p>
+                <h2>Our Services</h2>
+            </div>
+
+            <a href="pricing.html" class="text-link">Explore Services ↗</a>
+        </div>
+
+        <div class="service-grid">
+
+            <div class="service-card">
+                <span class="service-number">01</span>
+                <h3>Branding & Design</h3>
+                <p>Distinctive identities and visual systems that give brands their character.</p>
+            </div>
+
+            <div class="service-card">
+                <span class="service-number">02</span>
+                <h3>Digital Marketing</h3>
+                <p>Creative digital communication designed to connect brands with people.</p>
+            </div>
+
+            <div class="service-card">
+                <span class="service-number">03</span>
+                <h3>Web Design</h3>
+                <p>Modern, responsive websites built around clarity and user experience.</p>
+            </div>
+
+            <div class="service-card">
+                <span class="service-number">04</span>
+                <h3>Creative Production</h3>
+                <p>Photography, video and visual content that brings ideas to life.</p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- SELECTED WORK -->
+    <section class="home-work">
+        <div class="section-heading">
+            <div>
+                <p class="section-label">03 / OUR PORTFOLIO</p>
+                <h2>Selected Work</h2>
+            </div>
+
+            <a href="gallery.html" class="text-link">View All Work ↗</a>
+        </div>
+
+        <div class="work-image">
+            <div class="work-overlay">
+                <p>CREATIVE PRODUCTION</p>
+                <h3>Ideas into visuals.</h3>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT CTA -->
+    <section class="home-contact">
+        <p class="section-label">04 / LET'S CREATE SOMETHING</p>
+
+        <h2>
+            Have an idea?<br>
+            <span>Let's make it happen.</span>
+        </h2>
+
+        <a href="contact.html" class="btn-primary">Get in Touch ↗</a>
+    </section>
+
+</main>
+
+<footer class="site-footer">
+    <p>© 2026 InfiniteShutter Creative Studio. All rights reserved.</p>
+    <p>CREATIVITY WITHOUT LIMITS.</p>
 </footer>
+
 <script>
 function toggleMenu() {
     document.querySelector('.nav-links').classList.toggle('active');
 }
 </script>
-
-<div class="lightbox" id="lightbox">
-    <span class="close">&times;</span>
-    <img id="lightboxImg">
-    <span class="prev">&#10094;</span>
-    <span class="next">&#10095;</span>
-</div>
-
-<script src="js/main.js"></script>
 
 </body>
 </html>

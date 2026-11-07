@@ -1,168 +1,285 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- Favicon -->
-    <link rel="icon" href="favicon.ico">
+    <meta name="description" content="Explore selected creative work by InfiniteShutter, including automotive, portrait, event and street photography.">
 
-    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <title>Selected Work | InfiniteShutter Creative Studio</title>
 
-    <link rel="apple-touch-icon" href="apple-touch-icon.png">
-    <link rel="manifest" href="site.webmanifest">
-
-    <title>Gallery | InfiniteShutter</title>
-
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
     <link rel="stylesheet" href="css/style.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 
+<body>
 
-<!-- NAV -->
-<nav class="navbar">
-    <h1 class="logo">InfiniteShutter</h1>
+<header class="site-header">
+    <nav class="navbar">
+        <a href="index.html" class="logo">
+            InfiniteShutter
+            <span>CREATIVE STUDIO</span>
+        </a>
 
-    <div class="hamburger" onclick="toggleMenu()">☰</div>
+        <div class="hamburger" onclick="toggleMenu()">☰</div>
 
-    <ul class="nav-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="gallery.html" class="active">Gallery</a></li>
-        <li><a href="pricing.html">Pricing</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="contact.html">Contact</a></li>
-    </ul>
-</nav>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="gallery.html" class="active">Selected Work</a></li>
+            <li><a href="pricing.html">Pricing</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+</header>
 
 <main>
 
-<!-- ACTIVE CATEGORY -->
-<section class="active-category" id="activeCategory">
-    <div class="active-cover">
-        <img id="activeCoverImg" alt="">
-        <h2 id="activeTitle"></h2>
-    </div>
+    <!-- PORTFOLIO HERO -->
+    <section class="portfolio-hero">
+        <p class="section-label">PORTFOLIO / SELECTED PROJECTS</p>
 
-    <div class="active-images" id="activeImages"></div>
-</section>
+        <h1>
+            A collection of<br>
+            <span>creative perspectives.</span>
+        </h1>
 
-<!-- CATEGORY GRID -->
-<section class="gallery-categories" id="categoriesGrid">
+        <p>
+            A selection of visual work, creative experiments and
+            moments captured through different perspectives.
+        </p>
+    </section>
 
-    <div class="category" data-title="Automotive" data-cover="images/automotive-cover.jpg"
-         data-images="images/car1.jpg, images/car2.jpg, images/car3.jpg, images/car4.jpg, images/car5.jpg, images/car6.jpg, images/car7.jpg, images/car8.jpg, images/car9.jpg,
-         images/car10.jpg, images/car11.jpg, images/car12.jpg">
-        <button class="category-header">
-            <img src="images/automotive-cover.jpg" alt="" loading="lazy">
-            <span>Automotive</span>
-        </button>
-    </div>
+    <!-- CATEGORY GRID -->
+    <section class="portfolio-section" id="portfolioCategories">
 
-    <div class="category" data-title="Portrait" data-cover="images/portrait-cover.jpg"
-         data-images="images/portrait1.jpg,images/portrait2.jpg,images/portrait3.jpg,images/portrait4.jpg,images/portrait5.jpg,images/portrait6.jpg,images/portrait7.jpg,images/portrait8.jpg,
-         images/portrait9.jpg, images/portrait10.jpg, images/portrait11.jpg, images/portrait12.jpg">
-        <button class="category-header">
-            <img src="images/portrait-cover.jpg" alt="" loading="lazy">
-            <span>Portrait</span>
-        </button>
-    </div>
+        <div class="portfolio-heading">
+            <div>
+                <p class="section-label">EXPLORE OUR WORK</p>
+                <h2>Selected Categories</h2>
+            </div>
 
-    <div class="category" data-title="Event" data-cover="images/event-cover.jpg"
-         data-images="images/event1.jpg,images/event2.jpg,images/event3.jpg,images/event4.jpg,images/event5.jpg,images/event6.jpg,
-         images/event7.jpg, images/event8.jpg">
-        <button class="category-header">
-            <img src="images/event-cover.jpg" alt="" loading="lazy">
-            <span>Event</span>
-        </button>
-    </div>
+            <span class="portfolio-count">04 CATEGORIES</span>
+        </div>
 
-    <div class="category" data-title="Street" data-cover="images/street-cover.jpg"
-         data-images="images/street1.jpg,images/street2.jpg,images/street3.jpg,images/street4.jpg,images/street5.jpg,images/street6.jpg,images/street7.jpg,
-         images/street8.jpg, images/street9.jpg, images/street10.jpg, images/street11.jpg, image/street12.jpg">
-        <button class="category-header">
-            <img src="images/street-cover.jpg" alt="" loading="lazy">
-            <span>Street</span>
-        </button>
-    </div>
+        <div class="portfolio-grid">
 
-</section>
+            <button class="portfolio-card"
+                data-title="Automotive"
+                data-description="Automotive photography & visual storytelling"
+                data-cover="images/automotive-cover.jpg"
+                data-images="images/car1.jpg,images/car2.jpg,images/car3.jpg,images/car4.jpg,images/car5.jpg,images/car6.jpg,images/car7.jpg,images/car8.jpg,images/car9.jpg,images/car10.jpg,images/car11.jpg">
+
+                <img src="images/automotive-cover.jpg" alt="Automotive photography" loading="lazy">
+
+                <span class="portfolio-card-number">01 / 04</span>
+                <div class="portfolio-card-info">
+                    <div>
+                        <h3>Automotive</h3>
+                        <p>Cars · Details · Motion</p>
+                    </div>
+                    <span class="portfolio-arrow">↗</span>
+                </div>
+            </button>
+
+            <button class="portfolio-card"
+                data-title="Portrait"
+                data-description="Portrait photography & individual stories"
+                data-cover="images/portrait-cover.jpg"
+                data-images="images/portrait1.jpg,images/portrait2.jpg,images/portrait3.jpg,images/portrait4.jpg,images/portrait5.jpg,images/portrait6.jpg,images/portrait7.jpg,images/portrait8.jpg,images/portrait9.jpg,images/portrait10.jpg,images/portrait11.jpg">
+
+                <img src="images/portrait-cover.jpg" alt="Portrait photography" loading="lazy">
+
+                <span class="portfolio-card-number">02 / 04</span>
+                <div class="portfolio-card-info">
+                    <div>
+                        <h3>Portrait</h3>
+                        <p>People · Character · Emotion</p>
+                    </div>
+                    <span class="portfolio-arrow">↗</span>
+                </div>
+            </button>
+
+            <button class="portfolio-card"
+                data-title="Events"
+                data-description="Event photography & memorable moments"
+                data-cover="images/event-cover.jpg"
+                data-images="images/event1.jpg,images/event2.jpg,images/event3.jpg,images/event4.jpg,images/event5.jpg,images/event6.jpg,images/event7.jpg,images/event8.jpg">
+
+                <img src="images/event-cover.jpg" alt="Event photography" loading="lazy">
+
+                <span class="portfolio-card-number">03 / 04</span>
+                <div class="portfolio-card-info">
+                    <div>
+                        <h3>Events</h3>
+                        <p>Atmosphere · Moments · Stories</p>
+                    </div>
+                    <span class="portfolio-arrow">↗</span>
+                </div>
+            </button>
+
+            <button class="portfolio-card"
+                data-title="Street & Lifestyle"
+                data-description="Street photography & everyday perspectives"
+                data-cover="images/street-cover.jpg"
+                data-images="images/street1.jpg,images/street2.jpg,images/street3.jpg,images/street4.jpg,images/street5.jpg,images/street6.jpg,images/street7.jpg,images/street8.jpg,images/street9.jpg,images/street10.jpg,images/street11.jpg,images/street12.jpg">
+
+                <img src="images/street-cover.jpg" alt="Street and lifestyle photography" loading="lazy">
+
+                <span class="portfolio-card-number">04 / 04</span>
+                <div class="portfolio-card-info">
+                    <div>
+                        <h3>Street & Lifestyle</h3>
+                        <p>Urban · Lifestyle · Details</p>
+                    </div>
+                    <span class="portfolio-arrow">↗</span>
+                </div>
+            </button>
+
+        </div>
+    </section>
+
+    <!-- ACTIVE GALLERY -->
+    <section class="portfolio-gallery" id="activeCategory">
+
+        <div class="gallery-heading">
+            <div>
+                <p class="section-label">SELECTED COLLECTION</p>
+                <h2 id="activeTitle">Automotive</h2>
+                <p id="activeDescription"></p>
+            </div>
+
+            <button class="gallery-back" id="backToCategories">
+                ← All Categories
+            </button>
+        </div>
+
+        <div class="active-images" id="activeImages"></div>
+
+    </section>
+
+    <!-- CTA -->
+    <section class="home-contact">
+        <p class="section-label">HAVE A PROJECT IN MIND?</p>
+
+        <h2>
+            Let's create something<br>
+            <span>worth remembering.</span>
+        </h2>
+
+        <a href="contact.html" class="btn-primary">Start a Project ↗</a>
+    </section>
 
 </main>
 
 <!-- LIGHTBOX -->
-<div class="lightbox" id="lightbox">
-    <span class="close">&times;</span>
-    <span class="prev">&#10094;</span>
-    <img id="lightbox-img" alt="">
-    <span class="next">&#10095;</span>
+<div class="portfolio-lightbox" id="lightbox">
+    <button class="lightbox-close" aria-label="Close">&times;</button>
+    <button class="lightbox-prev" aria-label="Previous image">&#10094;</button>
+    <img id="lightbox-img" alt="Selected portfolio image">
+    <button class="lightbox-next" aria-label="Next image">&#10095;</button>
 </div>
 
+<footer class="site-footer">
+    <p>© 2026 InfiniteShutter Creative Studio. All rights reserved.</p>
+    <p>CREATIVITY WITHOUT LIMITS.</p>
+</footer>
+
 <script>
-const categories = document.querySelectorAll('.category');
-const activeSection = document.getElementById('activeCategory');
+function toggleMenu() {
+    document.querySelector('.nav-links').classList.toggle('active');
+}
+
+/* PORTFOLIO GALLERY */
+
+const cards = document.querySelectorAll('.portfolio-card');
+const gallery = document.getElementById('activeCategory');
 const activeTitle = document.getElementById('activeTitle');
-const activeCoverImg = document.getElementById('activeCoverImg');
+const activeDescription = document.getElementById('activeDescription');
 const activeImages = document.getElementById('activeImages');
-const grid = document.getElementById('categoriesGrid');
+const backButton = document.getElementById('backToCategories');
 
 const lightbox = document.getElementById('lightbox');
 const lightboxImg = document.getElementById('lightbox-img');
 
-let images = [];
+let currentImages = [];
 let currentIndex = 0;
 
-categories.forEach(cat => {
-    cat.querySelector('.category-header').onclick = () => {
+cards.forEach(card => {
+    card.addEventListener('click', () => {
 
-        activeTitle.textContent = cat.dataset.title;
-        activeCoverImg.src = cat.dataset.cover;
+        activeTitle.textContent = card.dataset.title;
+        activeDescription.textContent = card.dataset.description;
+
+        currentImages = card.dataset.images.split(',').map(src => src.trim());
         activeImages.innerHTML = '';
 
-        images = cat.dataset.images.split(',');
-
-        images.forEach(src => {
+        currentImages.forEach((src, index) => {
             const img = document.createElement('img');
+
             img.src = src;
-            img.loading = "lazy";   // 🔥 EZ HIÁNYZOTT
-            img.onclick = () => openLightbox(src);
+            img.alt = card.dataset.title + ' photography';
+            img.loading = 'lazy';
+
+            img.addEventListener('click', () => openLightbox(index));
+
             activeImages.appendChild(img);
         });
 
-        // Grid alul marad, aktív kártya eltűnik
-        categories.forEach(c => c.style.display = 'block');
-        cat.style.display = 'none';
+        gallery.classList.add('visible');
 
-        activeSection.style.display = 'block';
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-    };
+        gallery.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+        });
+    });
 });
 
-function openLightbox(src) {
-    currentIndex = images.indexOf(src);
-    lightboxImg.src = src;
+backButton.addEventListener('click', () => {
+    gallery.classList.remove('visible');
+
+    document.getElementById('portfolioCategories').scrollIntoView({
+        behavior: 'smooth',
+        block: 'start'
+    });
+});
+
+/* LIGHTBOX */
+
+function openLightbox(index) {
+    currentIndex = index;
+    lightboxImg.src = currentImages[currentIndex];
     lightbox.classList.add('active');
 }
 
-function navigate(dir) {
-    currentIndex = (currentIndex + dir + images.length) % images.length;
-    lightboxImg.src = images[currentIndex];
+function navigateGallery(direction) {
+    currentIndex = (currentIndex + direction + currentImages.length) % currentImages.length;
+    lightboxImg.src = currentImages[currentIndex];
 }
 
-document.querySelector('.close').onclick = () => lightbox.classList.remove('active');
-document.querySelector('.prev').onclick = () => navigate(-1);
-document.querySelector('.next').onclick = () => navigate(1);
+function closeLightbox() {
+    lightbox.classList.remove('active');
+}
 
-document.addEventListener('keydown', e => {
+document.querySelector('.lightbox-close').addEventListener('click', closeLightbox);
+document.querySelector('.lightbox-prev').addEventListener('click', () => navigateGallery(-1));
+document.querySelector('.lightbox-next').addEventListener('click', () => navigateGallery(1));
+
+lightbox.addEventListener('click', event => {
+    if (event.target === lightbox) closeLightbox();
+});
+
+document.addEventListener('keydown', event => {
     if (!lightbox.classList.contains('active')) return;
-    if (e.key === 'Escape') lightbox.classList.remove('active');
-    if (e.key === 'ArrowLeft') navigate(-1);
-    if (e.key === 'ArrowRight') navigate(1);
+
+    if (event.key === 'Escape') closeLightbox();
+    if (event.key === 'ArrowLeft') navigateGallery(-1);
+    if (event.key === 'ArrowRight') navigateGallery(1);
 });
 </script>
-
-<script src="js/main.js"></script>
 
 </body>
 </html>

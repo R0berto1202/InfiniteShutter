@@ -1,76 +1,207 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
-
-    <meta name="description" content="InfiniteShutter – Automotive, portrait and event photography portfolio.">
-    <meta name="keywords" content="InfiniteShutter, photography, automotive photography, portrait photography">
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About | InfiniteShutter</title>
-    <link rel="icon" type="image/x-icon" href="favicon.ico">
-    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
 
+    <meta name="description" content="Discover the story, creative vision and philosophy behind InfiniteShutter Creative Studio.">
+
+    <title>About | InfiniteShutter Creative Studio</title>
+
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
     <link rel="stylesheet" href="css/style.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
+
 <body>
 
-<header>
+<header class="site-header">
     <nav class="navbar">
-    <h1 class="logo">InfiniteShutter</h1>
+        <a href="index.html" class="logo">
+            InfiniteShutter
+            <span>CREATIVE STUDIO</span>
+        </a>
 
-    <!-- Hamburger icon -->
-    <div class="hamburger" onclick="toggleMenu()">
-        ☰
-    </div>
+        <div class="hamburger" onclick="toggleMenu()">☰</div>
 
-    <ul class="nav-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="gallery.html">Gallery</a></li>
-        <li><a href="pricing.html">Pricing</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="contact.html">Contact</a></li>
-    </ul>
-</nav>
-
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html" class="active">About</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="gallery.html">Selected Work</a></li>
+            <li><a href="pricing.html">Pricing</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
 </header>
 
-<section class="intro">
+<main>
 
-    <h2>About Me</h2>
+    <!-- ABOUT HERO -->
+    <section class="about-hero">
+        <p class="section-label">ABOUT INFINITESHUTTER / OUR STORY</p>
 
-    <img src="images/me.jpg" alt="Portrait of the photographer" class="about-photo" loading="lazy">
-    
-    <p>
-        Hello! My name is Robert. I am a photographer focusing mainly on automotive photography,
-        while also working with portraits, events and street photography.
-    </p>
+        <h1>
+            Driven by creativity.<br>
+            <span>Defined by vision.</span>
+        </h1>
 
-    <p>
-        Photography for me is not just about taking pictures, but about
-        capturing atmosphere, details and emotions. I always aim to create
-        clean, visually strong images that stand the test of time.
-    </p>
+        <p>
+            We believe every brand has a story worth telling.
+            Our purpose is to turn ideas into meaningful visual
+            experiences through creativity, design and technology.
+        </p>
+    </section>
 
-    <p>
-        I work with natural light whenever possible and adapt my style
-        to each project to match the client’s vision.
-    </p>
-</section>
+    <!-- THE STUDIO -->
+    <section class="about-studio">
+        <div class="about-studio-content">
+            <p class="section-label">01 / THE STUDIO</p>
 
+            <h2>
+                A creative vision<br>
+                <span>without boundaries.</span>
+            </h2>
 
-<footer>
-    <p>© 2026 InfiniteShutter. All rights reserved.</p>
+            <p>
+                InfiniteShutter is an independent creative studio
+                bringing together visual communication, digital design
+                and creative production.
+            </p>
+
+            <p>
+                We work across different creative disciplines to help
+                businesses and individuals build a distinctive presence.
+                Whether it is a visual identity, a website or a piece
+                of creative content, every project starts with an idea
+                and a clear purpose.
+            </p>
+        </div>
+
+        <div class="about-studio-visual">
+            <div class="about-visual-frame">
+                <span>INFINITESHUTTER</span>
+                <strong>CREATIVITY<br>WITHOUT LIMITS.</strong>
+                <small>INDEPENDENT CREATIVE STUDIO · EST. 2026</small>
+            </div>
+        </div>
+    </section>
+
+    <!-- PHILOSOPHY -->
+    <section class="about-philosophy">
+        <div class="philosophy-heading">
+            <p class="section-label">02 / OUR PHILOSOPHY</p>
+
+            <h2>
+                Good design is not<br>
+                just how it looks.<br>
+                <span>It is how it works.</span>
+            </h2>
+        </div>
+
+        <div class="philosophy-grid">
+
+            <div class="philosophy-card">
+                <span>01</span>
+                <h3>Purpose</h3>
+                <p>
+                    Every creative decision should have a reason.
+                    We focus on solutions that serve a clear purpose.
+                </p>
+            </div>
+
+            <div class="philosophy-card">
+                <span>02</span>
+                <h3>Consistency</h3>
+                <p>
+                    Strong brands are built through consistent
+                    communication, design and attention to detail.
+                </p>
+            </div>
+
+            <div class="philosophy-card">
+                <span>03</span>
+                <h3>Creativity</h3>
+                <p>
+                    We explore ideas from different perspectives
+                    and look for ways to make every project distinctive.
+                </p>
+            </div>
+
+            <div class="philosophy-card">
+                <span>04</span>
+                <h3>Progress</h3>
+                <p>
+                    We believe in continuous learning, improvement
+                    and finding better ways to bring ideas to life.
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- FOUNDER -->
+    <section class="about-founder">
+        <div class="founder-visual">
+    <img src="images/founder.jpg"
+         alt="Founder of InfiniteShutter Creative Studio">
+</div>
+
+        <div class="founder-content">
+            <p class="section-label">03 / THE PERSON BEHIND THE STUDIO</p>
+
+            <h2>
+                Creativity starts<br>
+                with <span>curiosity.</span>
+            </h2>
+
+            <p>
+                InfiniteShutter was founded by an independent creative
+                with a passion for photography, visual storytelling
+                and digital design.
+            </p>
+
+            <p>
+                What started as an interest in capturing moments
+                gradually developed into a broader creative vision:
+                bringing together photography, design, technology
+                and digital communication.
+            </p>
+
+            <p>
+                The goal is simple: keep learning, explore new ideas
+                and create thoughtful work that makes a lasting impression.
+            </p>
+
+            <a href="services.html" class="text-link">Discover What We Do ↗</a>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="home-contact">
+        <p class="section-label">LET'S WORK TOGETHER</p>
+
+        <h2>
+            Every great project<br>
+            <span>starts with an idea.</span>
+        </h2>
+
+        <a href="contact.html" class="btn-primary">Start a Project ↗</a>
+    </section>
+
+</main>
+
+<footer class="site-footer">
+    <p>© 2026 InfiniteShutter Creative Studio. All rights reserved.</p>
+    <p>CREATIVITY WITHOUT LIMITS.</p>
 </footer>
+
 <script>
 function toggleMenu() {
     document.querySelector('.nav-links').classList.toggle('active');
 }
 </script>
-
-<script src="js/main.js"></script>
 
 </body>
 </html>

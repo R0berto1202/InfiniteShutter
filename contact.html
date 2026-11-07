@@ -1,75 +1,160 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
-
-    <meta name="description" content="InfiniteShutter – Automotive, portrait and event photography portfolio.">
-    <meta name="keywords" content="InfiniteShutter, photography, automotive photography, portrait photography">
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact | InfiniteShutter</title>
-    <link rel="icon" type="image/x-icon" href="favicon.ico">
-    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
 
+    <meta name="description" content="Get in touch with InfiniteShutter Creative Studio. Let's discuss your next creative project.">
+
+    <title>Contact | InfiniteShutter Creative Studio</title>
+
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
     <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
+
 <body>
 
-<header>
-   <nav class="navbar">
-    <h1 class="logo">InfiniteShutter</h1>
+<header class="site-header">
+    <nav class="navbar">
+        <a href="index.html" class="logo-link">
+            <div class="logo">
+                InfiniteShutter
+                <span>CREATIVE STUDIO</span>
+            </div>
+        </a>
 
-    <!-- Hamburger icon -->
-    <div class="hamburger" onclick="toggleMenu()">
-        ☰
-    </div>
+        <div class="hamburger" onclick="toggleMenu()">☰</div>
 
-    <ul class="nav-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="gallery.html">Gallery</a></li>
-        <li><a href="pricing.html">Pricing</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="contact.html">Contact</a></li>
-    </ul>
-</nav>
-
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="gallery.html">Selected Work</a></li>
+            <li><a href="pricing.html">Pricing</a></li>
+            <li><a href="contact.html" class="active">Contact</a></li>
+        </ul>
+    </nav>
 </header>
 
+<main>
 
-<section class="contact-section">
-    <h2>Contact</h2>
-    <p>Let’s work together.</p>
+    <!-- CONTACT HERO -->
+    <section class="contact-hero">
 
-    <div class="contact-links">
-        <a href="mailto:robika062@gmail.com">📧 robika062@gmail.com</a>
-        <a href="https://instagram.com/robertnagy1202" target="_blank">📷 Instagram</a>
-        <a href="https://www.facebook.com/robert.toth.750546" target="_blank">👍 Facebook</a>
-    </div>
+        <span class="section-label">LET'S CONNECT / CONTACT</span>
 
-    <!-- FŐ GOMB -->
-    <a href="https://instagram.com/robertnagy1202" target="_blank" class="contact-btn">
-        Book via Instagram
-    </a>
+        <h1>
+            Have a project<br>
+            <span>in mind?</span>
+        </h1>
 
-    <!-- KIS SZÖVEG -->
-    <p class="contact-note">
-        Fastest way to book: DM me on Instagram
-    </p>
-</section>
+        <p>
+            Every great collaboration starts with a conversation.
+            Tell us about your idea, and let's create something meaningful together.
+        </p>
+
+    </section>
 
 
-<footer>
-    <p>© 2026 InfiniteShutter. All rights reserved.</p>
+    <!-- CONTACT INFORMATION -->
+    <section class="contact-main">
+
+        <div class="contact-intro">
+            <span class="section-label">GET IN TOUCH</span>
+
+            <h2>
+                Let's start<br>
+                <span>something great.</span>
+            </h2>
+
+            <p>
+                Whether you need a new visual identity, a website,
+                creative content or photography, we'd love to hear from you.
+            </p>
+        </div>
+
+
+        <div class="contact-methods">
+
+            <a href="mailto:robika062@gmail.com" class="contact-method">
+
+                <span class="contact-number">01 / EMAIL</span>
+
+                <h3>Let's talk business.</h3>
+
+                <p>robika062@gmail.com</p>
+
+                <span class="contact-arrow">↗</span>
+
+            </a>
+
+
+            <a href="https://www.instagram.com/infiniteshutter/"
+               target="_blank"
+               rel="noopener noreferrer"
+               class="contact-method">
+
+                <span class="contact-number">02 / INSTAGRAM</span>
+
+                <h3>Follow our work.</h3>
+
+                <p>@infiniteshutter</p>
+
+                <span class="contact-arrow">↗</span>
+
+            </a>
+
+
+            <div class="contact-method">
+
+                <span class="contact-number">03 / LOCATION</span>
+
+                <h3>Where we work.</h3>
+
+                <p>Hungary · Romania</p>
+
+                <span class="contact-arrow">✦</span>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- FINAL CTA -->
+    <section class="contact-cta">
+
+        <span class="section-label">YOUR IDEA STARTS HERE</span>
+
+        <h2>
+            Your vision.<br>
+            <span>Our creation.</span>
+        </h2>
+
+        <a href="mailto:robika062@gmail.com"
+           class="btn-primary">
+            SEND AN EMAIL ↗
+        </a>
+
+    </section>
+
+</main>
+
+
+<footer class="site-footer">
+    <p>© 2026 InfiniteShutter Creative Studio. All rights reserved.</p>
+    <span>CREATIVITY WITHOUT LIMITS.</span>
 </footer>
+
+
 <script>
 function toggleMenu() {
     document.querySelector('.nav-links').classList.toggle('active');
 }
 </script>
-
-<script src="js/main.js"></script>
 
 </body>
 </html>
