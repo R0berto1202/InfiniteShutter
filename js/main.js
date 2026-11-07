@@ -9,3 +9,31 @@ document.querySelectorAll('.nav-links a').forEach(link => {
         document.querySelector('.nav-links').classList.remove('active');
     });
 });
+
+// SCROLL REVEAL ANIMATION
+
+document.addEventListener("DOMContentLoaded", () => {
+    const elements = document.querySelectorAll(
+        "main section > *, main section .service-card, main section .work-card"
+    );
+
+    elements.forEach(element => {
+        element.classList.add("reveal");
+    });
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add("visible");
+            } else {
+                entry.target.classList.remove("visible");
+            }
+        });
+    }, {
+        threshold: 0.12
+    });
+
+    document.querySelectorAll(".reveal").forEach(element => {
+        observer.observe(element);
+    });
+});

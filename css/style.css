@@ -2171,3 +2171,36 @@ body {
         padding: 85px 20px;
     }
 }
+
+
+/* =================================
+   SCROLL REVEAL ANIMATIONS
+================================= */
+
+.reveal {
+    opacity: 0;
+    transform: translateY(35px);
+    transition:
+        opacity 0.9s ease,
+        transform 0.9s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Smooth background transitions */
+
+main section {
+    position: relative;
+    isolation: isolate;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .reveal {
+        opacity: 1;
+        transform: none;
+        transition: none;
+    }
+}
