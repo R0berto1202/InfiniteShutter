@@ -3212,3 +3212,19 @@ body.lightbox-open {
 .lightbox-next {
     padding-left: 5px;
 }
+
+@media (max-width: 600px) {
+    .case-modal .case-nav {
+        left: 12px;
+        right: 12px;
+    }
+}
+
+/* HIDE LIGHTBOX ARROWS ON MOBILE */
+
+@media (max-width: 650px) {
+    .lightbox-prev,
+    .lightbox-next {
+        display: none !important;
+    }
+}
