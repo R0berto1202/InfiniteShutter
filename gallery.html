@@ -603,6 +603,29 @@ document.getElementById("caseGallery").addEventListener("click", event => {
 lightboxNext.addEventListener("click", showNextImage);
 lightboxPrev.addEventListener("click", showPreviousImage);
 
+/* MOBILE SWIPE NAVIGATION */
+
+let touchStartX = 0;
+let touchEndX = 0;
+
+imageLightbox.addEventListener("touchstart", (e) => {
+    touchStartX = e.changedTouches[0].screenX;
+}, { passive: true });
+
+imageLightbox.addEventListener("touchend", (e) => {
+    touchEndX = e.changedTouches[0].screenX;
+
+    const swipeDistance = touchEndX - touchStartX;
+
+    if (Math.abs(swipeDistance) < 50) return;
+
+    if (swipeDistance < 0) {
+        showNextImage();
+    } else {
+        showPreviousImage();
+    }
+}, { passive: true });
+
 /* CLOSE */
 
 lightboxClose.addEventListener("click", closeImageLightbox);
