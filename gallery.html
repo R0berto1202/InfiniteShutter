@@ -322,7 +322,10 @@
 
             <p class="case-intro" id="caseIntro"></p>
 
-            <div class="case-divider"></div>
+<!-- CASE STUDY IMAGES -->
+<div class="case-gallery" id="caseGallery"></div>
+
+<div class="case-divider"></div>
 
             <div class="case-details">
 
@@ -369,14 +372,22 @@
 const projectData = {
 
     aurea: {
-        category: "BRANDING & DESIGN / CONCEPT",
-        title: "AUREA — Visual Identity",
-        intro: "A premium identity concept built around simplicity, elegance and timeless visual communication.",
-        challenge: "Create a distinctive identity for a fictional premium lifestyle brand that communicates quality without unnecessary visual complexity.",
-        approach: "Explore a restrained visual language through typography, spacing, warm neutral tones and carefully selected golden details.",
-        solution: "A cohesive visual identity concept featuring a wordmark, supporting graphic elements and a consistent art direction.",
-        services: "Brand direction, logo concept, visual identity, typography and brand applications."
-    },
+    category: "BRANDING & DESIGN / CONCEPT",
+    title: "AUREA — Visual Identity",
+    intro: "A premium identity concept built around simplicity, elegance and timeless visual communication.",
+
+    images: [
+        "images/aurea/aurea-cover.jpg",
+        "images/aurea/aurea-guidelines.jpg",
+        "images/aurea/aurea-applications.jpg",
+        "images/aurea/aurea-complete.jpg"
+    ],
+
+    challenge: "Create a distinctive identity for a fictional premium lifestyle brand that communicates quality without unnecessary visual complexity.",
+    approach: "Explore a restrained visual language through typography, spacing, warm neutral tones and carefully selected golden details.",
+    solution: "A cohesive visual identity concept featuring a wordmark, supporting graphic elements and a consistent art direction.",
+    services: "Brand direction, logo concept, visual identity, typography and brand applications."
+},
 
     apex: {
         category: "DIGITAL MARKETING / CONCEPT",
@@ -433,6 +444,8 @@ const projectData = {
 
 /* OPEN CASE STUDY */
 
+
+
 const caseModal = document.getElementById("caseModal");
 
 document.querySelectorAll(".work-card-button").forEach(button => {
@@ -446,6 +459,23 @@ document.querySelectorAll(".work-card-button").forEach(button => {
         document.getElementById("caseCategory").textContent = project.category;
         document.getElementById("caseTitle").textContent = project.title;
         document.getElementById("caseIntro").textContent = project.intro;
+
+const caseGallery = document.getElementById("caseGallery");
+
+caseGallery.innerHTML = "";
+
+if (project.images) {
+    project.images.forEach((image, index) => {
+        const img = document.createElement("img");
+
+        img.src = image;
+        img.alt = project.title + " — Image " + (index + 1);
+        img.loading = "lazy";
+
+        caseGallery.appendChild(img);
+    });
+}
+
         document.getElementById("caseChallenge").textContent = project.challenge;
         document.getElementById("caseApproach").textContent = project.approach;
         document.getElementById("caseSolution").textContent = project.solution;
@@ -480,6 +510,145 @@ function closeCaseStudy() {
 
 document.getElementById("caseClose").addEventListener("click", closeCaseStudy);
 
+/* IMAGE LIGHTBOX */
+
+const imageLightbox = document.createElement("div");
+imageLightbox.className = "image-lightbox";
+imageLightbox.setAttribute("aria-hidden", "true");
+
+imageLightbox.innerHTML = `
+    <button class="lightbox-close" aria-label="Close image">&times;</button>
+    <button class="lightbox-prev" aria-label="Previous image">&#10094;</button>
+    <img class="lightbox-image" src="" alt="">
+    <button class="lightbox-next" aria-label="Next image">&#10095;</button>
+`;
+
+document.body.appendChild(imageLightbox);
+
+const lightboxImage = imageLightbox.querySelector(".lightbox-image");
+const lightboxClose = imageLightbox.querySelector(".lightbox-close");
+const lightboxPrev = imageLightbox.querySelector(".lightbox-prev");
+const lightboxNext = imageLightbox.querySelector(".lightbox-next");
+
+let currentImages = [];
+let currentImageIndex = 0;
+
+function showLightboxImage(index) {
+    currentImageIndex = (index + currentImages.length) % currentImages.length;
+
+    const image = currentImages[currentImageIndex];
+
+    lightboxImage.src = image.src;
+    lightboxImage.alt = image.alt;
+}
+
+function openImageLightbox(image) {
+    currentImages = Array.from(
+        document.querySelectorAll("#caseGallery img")
+    );
+
+    currentImageIndex = currentImages.indexOf(image);
+
+    showLightboxImage(currentImageIndex);
+
+    imageLightbox.classList.add("active");
+    imageLightbox.setAttribute("aria-hidden", "false");
+    document.body.classList.add("lightbox-open");
+
+    lightboxClose.focus();
+}
+
+function closeImageLightbox() {
+    imageLightbox.classList.remove("active");
+    document.body.classList.remove("lightbox-open");
+
+    lightboxImage.src = "";
+
+    if (imageLightbox.contains(document.activeElement)) {
+        document.activeElement.blur();
+    }
+
+    imageLightbox.setAttribute("aria-hidden", "true");
+}
+
+function showNextImage() {
+    showLightboxImage(currentImageIndex + 1);
+}
+
+function showPreviousImage() {
+    showLightboxImage(currentImageIndex - 1);
+}
+
+/* IMAGE CLICK */
+
+document.getElementById("caseGallery").addEventListener("click", event => {
+    const image = event.target.closest("img");
+
+    if (image) {
+        openImageLightbox(image);
+    }
+});
+
+/* NAVIGATION */
+
+lightboxNext.addEventListener("click", showNextImage);
+lightboxPrev.addEventListener("click", showPreviousImage);
+
+/* CLOSE */
+
+lightboxClose.addEventListener("click", closeImageLightbox);
+
+imageLightbox.addEventListener("click", event => {
+    if (event.target === imageLightbox) {
+        closeImageLightbox();
+    }
+});
+
+/* KEYBOARD CONTROLS */
+
+document.addEventListener("keydown", event => {
+    if (imageLightbox.classList.contains("active")) {
+
+        if (event.key === "Escape") {
+            closeImageLightbox();
+        }
+
+        if (event.key === "ArrowRight") {
+            showNextImage();
+        }
+
+        if (event.key === "ArrowLeft") {
+            showPreviousImage();
+        }
+
+    } else if (
+        event.key === "Escape" &&
+        caseModal.classList.contains("active")
+    ) {
+        closeCaseStudy();
+    }
+});
+
+/* WORKS FOR EVERY PROJECT */
+
+document.getElementById("caseGallery").addEventListener("click", event => {
+    const image = event.target.closest("img");
+
+    if (image) {
+        openImageLightbox(image);
+    }
+});
+
+/* CLOSE LIGHTBOX */
+
+lightboxClose.addEventListener("click", closeImageLightbox);
+
+imageLightbox.addEventListener("click", event => {
+    if (event.target === imageLightbox) {
+        closeImageLightbox();
+    }
+});
+
 caseModal.addEventListener("click", event => {
     if (event.target === caseModal) {
         closeCaseStudy();
@@ -487,8 +656,14 @@ caseModal.addEventListener("click", event => {
 });
 
 document.addEventListener("keydown", event => {
-    if (event.key === "Escape" && caseModal.classList.contains("active")) {
-        closeCaseStudy();
+    if (event.key === "Escape") {
+
+        if (imageLightbox.classList.contains("active")) {
+            closeImageLightbox();
+
+        } else if (caseModal.classList.contains("active")) {
+            closeCaseStudy();
+        }
     }
 });
 </script>
